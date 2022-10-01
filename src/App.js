@@ -24,7 +24,7 @@ function App() {
           <Route path="/post/:id" component={PostPage} />
           <Route path="/about" component={About} />
           <Route path="/react_context"> <Redirect to = '/'/> </Route>
-          <Route path="*" component={Missing} />
+          {/* <Route path="*" component={Missing} /> */}
         </Switch>
       </DataProvider>
       <Footer />
