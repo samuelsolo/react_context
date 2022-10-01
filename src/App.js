@@ -7,7 +7,7 @@ import PostPage from './PostPage';
 import EditPost from './EditPost';
 import About from './About';
 import Missing from './Missing';
-import { Route, Switch } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import { DataProvider } from './context/DataContext';
 
 function App() {
@@ -23,6 +23,7 @@ function App() {
           <Route path="/edit/:id" component={EditPost} />
           <Route path="/post/:id" component={PostPage} />
           <Route path="/about" component={About} />
+          <Route path="/react_context"> <Redirect to = '/'/> </Route>
           <Route path="*" component={Missing} />
         </Switch>
       </DataProvider>
